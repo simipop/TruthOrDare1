@@ -1,0 +1,14 @@
+﻿@page "/"
+
+<PageTitle>Truth Or Dare</PageTitle>
+
+<button @onclick="() => OnButtonClick(Models.QuestionType.Truth)">Truth</button>
+
+<button @onclick="() => OnButtonClick(Models.QuestionType.Dare)">Dare</button>
+
+
+<p>@_question?.Text 
+    <b>@if (_seconds != null)
+            @_seconds
+    </b> 
+</p>
